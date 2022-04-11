@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/about.css">
+    <link rel="stylesheet" href="/static/css/userBase.css">
+    <link rel="stylesheet" href="/static/css/user.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>{{name}} | Food For All</title>
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <header>
+        <div class="new">
+            <section class="hadder">
+                <div class="container">
+                    <nav class="navbar abx navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+                        <a class="navbar-brand" href="users">FoodForAll</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="contactuser">Contact Us <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="galleryDoner">Gallery</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            My Account
+                        </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="requeststatus">Request Status</a>
+                                        <a class="dropdown-item" href="predonation">View Previous Donations</a>
+                                        <a class="dropdown-item" href="aboutuser">About Us</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="updateProfile">Update Profile</a>
+                                        <a class="dropdown-item" href="changepassword">Change Password</a>
+                                        <a class="dropdown-item" href="logout">Logout</a>
+                                    </div>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </nav>
+                </div>
+
+                <!-- <div class="message">
+                    {% for message in messages %}
+                    <li {% if message.tags %} <div class="alert alert-success my-0 alert-dismissible tag">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> {% endif %}{{ message }}</li>
+                </div>
+                {% endfor %}
+        </div> -->
+                <!-- starting of contain  -->
+                <div class=" h-100">
+                    <div class="message">
+                        {% for message in messages %}
+                        <li {% if message.tags %} <div class="alert alert-success my-0 alert-dismissible tag">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> {% endif %}{{ message }}</li>
+                    </div>
+                    {% endfor %}
+                </div>
+                <!-- starting of contain  -->
+                <div class=" row align-items-center ">
+                    <div class="  col-md-12">
+                        <p>
+                            <br><br><br>
+                            <br>
+                            <h1 class="container">YOUR SUPPORT MATTERS</h1>
+                            <br>
+                            <h3 class="container">We serve cooked meals and row grains to people in need daily</h3>
+                        </p>
+                        <br><br>
+                        <div class="donate container"><button class="button1"><a href="donate"class="lik" >Donate Food</a></button></div>
+                    </div>
+            </section>
+            </section>
+            </div>
+            <div class="container my-5">
+                <h2>Help us eradicate hunger in India</h2>
+                <div class="pera">
+                    194 million people in India today do not have enough food to eat, the largest in any one country in the world. According to the Global Hunger Index 2021, India falls under the ‘serious’ hunger category with a rank of 101 among 116 countries.<br><br>                    These statistics however, do not take into account the effects of COVID-19. The resultant migration, unemployment and loss of earning members of households has pushed millions of Indians into extreme poverty and hunger.
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container my-5">
+        <h2>The Solution</h2>
+        <div class="pera2">
+            <h3>We believe providing regular meals to dependents in underserved communities to reduce financial burden in the short term, empowering them to become free from hunger in the long term.</h3>
+        </div>
+        <div class="pera">The Daily Feeding Program is our effort to support such individuals with cooked meals daily. We have a growing network of credible NGOs involved in the field of education, skill development and livelihood to feed dependent beneficiaries.</div>
+    </div>
+    </div>
+    </div>
+    <section class="mainbox my-3">
+        <div class="">
+            <div class="row ">
+                <div class="col-sm my-3  text-center">
+                    <a class="navbar-brand" href="users">
+                        <p class="text-dark">FoodForAll</p>
+                    </a>
+                </div>
+                <div class="col-sm my-3">
+                    <p class="who text-dark">Who we are</p>
+
+                    <li class="ab ">
+                        <a href="aboutuser">About us</a>
+                    </li>
+                    <li class="ab "><a href="contactuser">Contact us</a></li>
+
+                </div>
+                <div class="col-sm my-3">
+                    <p class="who text-dark">Get Invoved</p>
+                    <li class="ab ">
+                        <a href="donate">Donate Food</a>
+                    </li>
+                </div>
+                <div class="col-sm my-3">
+                    <div class=" text-dark">Social</div>
+                    <br>
+                    <div class="">
+                        <a href="#" class="fa fa-facebook"> </a>&nbsp;
+                        <a href="#" class="fa fa-twitter"> </a>&nbsp;
+                        <a href="#" class="fa fa-instagram"> </a>&nbsp;
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer bg-dark">
+        <div class="container text-center text-white">
+            <p class="ph">Created For FoodForAll &nbsp;&nbsp;&nbsp;&nbsp;|<i class="fa fa-envelope"></i>foodforall@gmail.com</p>
+        </div>
+    </footer>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/static/javascript/userBase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

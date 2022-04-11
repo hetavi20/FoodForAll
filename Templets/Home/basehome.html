@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    {% comment %}
+    <link rel="stylesheet" href="/static/css/home.css"> {% endcomment %} {% load static %}
+    <link rel="stylesheet" href="{% static '/css/home.css' %}">
+    <link rel="stylesheet" href="{% static '/css/about.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+        .bodyText {
+            margin: 30px;
+        }
+        
+        .menu li {
+            font-size: 20px;
+        }
+        
+        .menu li:hover {
+            background-color: #2980B9;
+        }
+        
+        .titlefont {
+            font-size: xx-large;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navigation">
+        <nav class="navbar">
+            <!-- LOGO -->
+            <div class="logo">FoodForAll</div>
+            <!-- NAVIGATION MENU -->
+            <ul class="nav-links">
+                <!-- USING CHECKBOX HACK -->
+                <input type="checkbox" id="checkbox_toggle" />
+                <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+                <!-- NAVIGATION MENUS -->
+                <div class="menu">
+                    <li><a href="{% block homelink %}{% endblock homelink %}">Home</a></li>
+                    <li><a href="{% block aboutlink %}{% endblock aboutlink %}">About Us</a></li>
+                    <li><a href="{% block contactlink %}{% endblock contactlink %}">Contact Us</a></li>
+                    <li><a href="gallery">Gallery</a></li>
+                    <li><a href="logout">Logout</a></li>
+                </div>
+            </ul>
+        </nav>
+    </div>
+
+    {% block content %}{% endblock content %} {% comment %}
+    <script src="/static/javascript/home.js"></script> {% endcomment %}
+
+</body>
+
+</html>

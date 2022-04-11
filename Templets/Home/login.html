@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/register.css">
+    <link rel="stylesheet" href="/static/css/userBase.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Login | Food For All</title>
+</head>
+
+<body>
+    <section class="hadder">
+        <div class="message">
+            {% for message in messages %}
+            <li {% if message.tags %} <div class="alert alert-danger alert-dismissible tag">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> {% endif %}{{ message }}</li>
+        </div>
+        {% endfor %}
+        </div>
+        <div class="container ">
+            <div class="title">
+                <br><br><br>
+                <h1 class="text-center text-light">Food For All</h1>
+                <br><br>
+            </div>
+
+
+            <div class="row ">
+                <div class="col-md-6 offset-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="text-dark">Login here..!</h3>
+                            <!-- for name -->
+                            <form action="" method="post" onsubmit="return validate()">
+                                {% csrf_token %}
+                                <!-- for user name -->
+                                <div class="form-group mt-3">
+                                    <input name="username" type="text" class="form-control name-field" placeholder="Enter your username">
+                                    <small class="name-field-msg form-text text-danger ml-3"></small>
+                                </div>
+                                <!-- for password -->
+                                <div class=" form-group mt-3">
+                                    <input name="password" type="password" class="password-field form-control" placeholder="Enter your Password">
+                                    <small class="password-field-msg form-text text-danger ml-3"></small>
+                                </div>
+
+                                <!-- for submit -->
+                                <div class="container text-center">
+                                    <button class="btn btn-outline-primary">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="container text-center my-3 text-dark">
+                            Dont't have an account?
+                            <a href="register">Sign up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="mainbox my-3">
+        <div class="">
+            <div class="row ">
+                <div class="col-sm my-3  text-center">
+                    <a class="navbar-brand" href="/">
+                        <p class="text-dark">FoodForAll</p>
+                    </a>
+                </div>
+                <div class="col-sm my-3">
+                    <p class="who">Who we are</p>
+
+                    <li class="ab ">
+                        <a href="about">About us</a>
+                    </li>
+                    <li class="ab "><a href="contact">Contact us</a></li>
+
+                </div>
+                <div class="col-sm my-3">
+                    <p class="who ">Get Invoved</p>
+                    <li class="ab ">
+                        <a href="register">Donate Food</a>
+                    </li>
+                </div>
+                <div class="col-sm my-3">
+                    <div class="text-center">Social</div>
+                    <div class="">
+                        <a href="#" class="fa fa-facebook"> </a>&nbsp;
+                        <a href="#" class="fa fa-twitter"> </a>&nbsp;
+                        <a href="#" class="fa fa-instagram"> </a>&nbsp;
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer bg-dark">
+        <div class="container text-center text-white">
+            <p class="ph">Created For FoodForAll &nbsp;&nbsp;&nbsp;&nbsp;|<i class="fa fa-envelope"></i>foodforall@gmail.com</p>
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/static/javascript/jquery.min.js"></script>
+    <script src="/static/javascript/login.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

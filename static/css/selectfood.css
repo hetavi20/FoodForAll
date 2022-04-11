@@ -1,0 +1,194 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.hadder {
+    margin: 20px;
+    text-align: center;
+    font-size: 30px;
+    opacity: .8;
+}
+
+.food-container,
+.foodpack {
+    padding: 0 10vw;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.food-container::-webkit-scrollbar {
+    display: none;
+}
+
+.food-card {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 450px;
+    margin-right: 40px;
+}
+
+.food-image {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.food-thumb {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.card-btn {
+    position: relative;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    width: 100%;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    background: #efefef;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 100;
+}
+
+.food-card:hover .card-btn {
+    opacity: 1;
+}
+
+.card-btn:hover {
+    background: #d1c5c5;
+}
+
+.food-info {
+    width: 100%;
+    height: 100px;
+    padding-top: 10px;
+}
+
+.food-brand {
+    text-transform: uppercase;
+}
+
+.food-availble {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    color: red;
+    background-color: black;
+    margin: 5px 0;
+    padding-bottom: 6px;
+}
+
+.quantity {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    /* text-transform: capitalize; */
+    margin: 5px 0;
+}
+
+.food-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: auto;
+    grid-row-gap: 40px;
+}
+
+.pera {
+    font-size: 30px;
+    text-align: center;
+    /* padding-left: 140px; */
+    position: relative;
+}
+
+.con {
+    margin: 0;
+    padding: 0;
+}
+
+.centeree {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    /* color: red; */
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    /* background-color: black; */
+    padding: 6px;
+    transform: translate(-50%, -50%);
+}
+
+.centered {
+    font-family: 'Times New Roman', Times, serif;
+    /* font-size: 30px; */
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* new  */
+
+.select-food {
+    margin-top: 20px;
+    font-size: 35px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 25vw;
+    object-fit: cover;
+}
+
+.previous-orders {
+    margin-top: 0;
+    padding-top: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, .9), rgba(0, 0, 0, .8)), url(/static/Image/contact.jpg);
+    background-size: cover;
+    min-height: 700px;
+}
+
+.card {
+    padding-left: 0px;
+}
+
+.row1,
+.he {
+    padding-top: 40px;
+}
+
+.packag {
+    margin-top: 0;
+    padding-top: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, .9), rgba(0, 0, 0, .5)), url(/static/Image/contact.jpg);
+    background-size: cover;
+    /* max-height: 4000px; */
+}
+
+.ax {
+    background-color: rgba(255, 255, 255, .5) !important;
+}
+
+.tx {
+    color: black;
+}
+
+.abc {
+    border-radius: 5px;
+}
+
+.abv {
+    color: red;
+}

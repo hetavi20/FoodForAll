@@ -1,0 +1,41 @@
+{% extends 'registration.html' %}
+{% block formtitle %}NGO Registration{% endblock formtitle %}NGO Registration
+{% block contant %}
+
+
+<table>
+
+</tr>
+
+<tr>
+    <td>User Name:</td>
+    <td><input type="text" name="username" id="username-field" class="register-form-field" placeholder="Enter your Username"></td>
+</tr>
+
+<tr>
+    <td>Email:</td>
+    <td><input type="email" name="email" id="email-field" class="register-form-field" placeholder="Enter your Email"></td>
+</tr>
+<tr>
+    <td>Password:</td>
+    <td><input type="password" name="password1" id="password-field" class="register-form-field" placeholder="Enter your Password"></td>
+</tr>
+<tr>
+    <td>Confirm Password:</td>
+    <td><input type="password" name="password2" id="confirm-password-field" class="register-form-field" placeholder="Confirm your Password"></td>
+</tr>
+
+
+</table>
+
+
+<br>
+<input type="submit" value="Submit" id="register-form-submit" onclick="validate()">
+<br>
+<div class="register">
+Have an account?
+<a href="login">Log in</a>
+</div>
+<br><br><br><br><br><br>
+
+{% endblock contant %}

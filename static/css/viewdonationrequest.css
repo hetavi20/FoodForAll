@@ -1,0 +1,111 @@
+/* css for donation request */
+
+.viewrequest {
+    margin-top: 20px;
+}
+
+.tab {
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* about food afood file */
+
+.hadder {
+    width: 100%;
+    color: white;
+    background: linear-gradient(to right, rgba(0, 0, 0, .9), rgba(0, 0, 0, .5)), url(/static/Image/foodd.jpg);
+    background-size: cover;
+    min-height: 700px;
+}
+
+.title-p {
+    color: white;
+    padding: 20px;
+}
+
+
+/* .main {
+    width: 100%;
+    color: white;
+    background: linear-gradient(to right, rgba(0, 0, 0, .9), rgba(0, 0, 0, .5)), url(/static/Image/foodd.jpg);
+    background-size: cover;
+    min-height: 800px !important;
+} */
+
+.title-fr {
+    color: white;
+    padding: 20px;
+}
+
+.title-ch {
+    color: white;
+    padding: 20px;
+}
+
+.card1 {
+    margin: 0 auto;
+    /* Added */
+    float: none;
+    /* Added */
+    margin-bottom: 10px;
+    /* Added */
+    border-radius: 10px;
+    background-color: rgb(230 215 215) !important;
+}
+
+.card {
+    margin: 0 auto;
+    /* Added */
+    float: none;
+    /* Added */
+    margin-bottom: 10px;
+    /* Added */
+    border-radius: 10px;
+}
+
+.title-food {
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+
+.message {
+    opacity: .8;
+}
+
+.tag {
+    color: black;
+}
+
+.list-doner {
+    padding-top: 20px;
+    color: white;
+}
+
+.main-part {
+    width: 100%;
+    color: white;
+    background: linear-gradient(to right, rgba(0, 0, 0, .9), rgba(0, 0, 0, .5)), url(/static/Image/foodd.jpg);
+    background-size: cover;
+    min-height: 800px !important;
+}
+
+
+/* for feedback */
+
+.row1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.imgf {
+    padding: 6px;
+}
+
+.use {
+    opacity: .9;
+}

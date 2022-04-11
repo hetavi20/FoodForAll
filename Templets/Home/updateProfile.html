@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/user.css">
+    <link rel="stylesheet" href="/static/css/userBase.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/viewdonationrequest.css">
+    <title>{{name}} | Update Profile | FoodForAll</title>
+</head>
+
+<body>
+    <section class="hadder">
+        <section class="hadder">
+            <div class="container">
+                <nav class="navbar abx navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+                    <a class="navbar-brand" href="users">FoodForAll</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="contactuser">Contact Us <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="gallery">Gallery</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            My Account
+                        </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="requeststatus">Request Status</a>
+                                    <a class="dropdown-item" href="predonation">View Previous Donations</a>
+                                    <a class="dropdown-item" href="aboutuser">About Us</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="updateProfile">Update Profile</a>
+                                    <a class="dropdown-item" href="changepassword">Change Password</a>
+                                    <a class="dropdown-item" href="logout">Logout</a>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </nav>
+            </div>
+            <div class="message">
+                {% for message in messages %}
+                <li {% if message.tags %} <div class="alert alert-success alert-dismissible tag">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> {% endif %}{{ message }}</li>
+            </div>
+            {% endfor %}
+            </div>
+            <div class="container ">
+                <div class="">
+                    <br>
+                    <h1 class="text-center text-light">Food For All</h1>
+                    <br>
+                </div>
+
+                <div class="row ">
+                    <div class="col-md-6 offset-md-3">
+                        <div class="card ">
+                            <div class="card-body">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+
+                                                <!-- <td><img src="/static/Image/icons8-user-30.png"></td> -->
+                                            </td>
+                                            <!-- <td>Fullname:{{user.fullname}}</td> -->
+
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                                <hr>
+                                <h2 class="text-dark">Change Profile</h2>
+                                <!--  -->
+                                <!-- for name -->
+                                <form action="" method="post" onsubmit="return validate()">
+                                    {% csrf_token %}
+
+                                    <div class=" form-group mt-3 text-dark">
+                                        <label for="username ">Username</label>
+                                        <input name="username" type="text" class="text-dark username-field form-control" value="{{user.user.username}}">
+                                        <small class="username-field-msg form-text text-danger ml-3">
+                                    </small>
+                                    </div>
+
+                                    <div class=" form-group mt-3 text-dark">
+                                        <label for="email">Email</label>
+                                        <input name="email" type="text" class="email-field form-control" value="{{user.user.email}}">
+                                        <small class="email-field-msg form-text text-danger ml-3"></small>
+                                    </div>
+                                    <div class=" form-group mt-3 text-dark">
+                                        <label for="fullname">Fullname</label>
+                                        <input name="fullname" type="text" class="fullname-field form-control" value="{{user.fullname}}">
+                                        <small class="fullname-field-msg form-text text-danger ml-3"></small>
+                                    </div>
+                                    <div class=" form-group mt-3 text-dark">
+                                        <label for="PhoneNumber">PhoneNumber</label>
+                                        <input name="phone" type="text" class="phone-field form-control" value="{{user.phoneno}}">
+                                        <small class="phone-field-msg form-text text-danger ml-3"></small>
+                                    </div>
+                                    <div class=" form-group mt-3 text-dark">
+                                        <label for="AadharNumber">Aadhar Number</label>
+                                        <input name="aadhar" type="text" class="aadhar form-control" value="{{user.aadhar}}">
+                                        <small class="aadhar-field-msg form-text text-danger ml-3"></small>
+                                    </div>
+                                    <div class=" form-group mt-3 text-dark">
+                                        <label for="Address">Address</label>
+                                        <input name="address" type="text" class="address form-control" value="{{user.address}}">
+                                        <small class="address-field-msg form-text text-danger ml-3"></small>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6 text-dark">
+                                            <label for="City">City</label>
+                                            <input name="city" type="text" class="form-control city" id="inputCity" value="{{user.city}}">
+                                            <small class="city-field-msg form-text text-danger ml-3"></small>
+                                        </div>
+                                        <div class="form-group col-md-4 text-dark">
+                                            <label for="State">State</label>
+                                            <input name="state" type="text" class="form-control state" id="inputState" value="{{user.state}}">
+                                            <small class="state-field-msg form-text text-danger ml-3"></small>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-2 text-dark">
+                                            <label for="Zip">Zip</label>
+                                            <input name="zip" type="text" class="form-control zip" id="inputZip" value="{{user.zip}}">
+                                            <small class="zip-field-msg form-text text-danger ml-3"></small>
+                                        </div>
+                                    </div>
+                                    <!-- for submit -->
+                                    <div class="container text-center">
+                                        <button class="btn btn-outline-primary my-3">Save Change</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="/static/javascript/userBase.js"></script>
+        <script src="/static/javascript/jquery.min.js"></script>
+        <script src="/static/javascript/register.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,306 @@
+.hd {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.tab {
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.food {
+    text-align: center;
+}
+
+
+/*basic css*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: cursive;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* NAVBAR STYLING STARTS */
+
+
+/* .navigation {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+} */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #4c9e9e;
+    color: #fff;
+    height: 100px;
+}
+
+.nav-links a {
+    color: #fff;
+    font-size: 20px;
+}
+
+
+/* LOGO */
+
+.logo {
+    font-size: 32px;
+}
+
+
+/* NAVBAR MENU */
+
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+
+.menu li:hover {
+    background-color: #2980B9;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.menu li {
+    padding: 5px 14px;
+}
+
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+
+
+/* CHECKBOX HACK */
+
+input[type=checkbox] {
+    display: none;
+}
+
+
+/*HAMBURGER MENU*/
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+
+
+/* APPLYING MEDIA QUERIES */
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        position: absolute;
+        background-color: teal;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 0;
+    }
+    .menu li:hover {
+        display: inline-block;
+        background-color: #9de5e5;
+        transition: 0.3s ease;
+    }
+    .menu li+li {
+        margin-top: 12px;
+    }
+    input[type=checkbox]:checked~.menu {
+        display: block;
+    }
+    .hamburger {
+        display: block;
+    }
+    .dropdown {
+        left: 50%;
+        top: 30px;
+        transform: translateX(35%);
+    }
+    .dropdown li:hover {
+        background-color: #4c9e9e;
+    }
+}
+
+
+/* css for donation request */
+
+
+/* about food afood file */
+
+
+/* Float four columns side by side */
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+
+
+/* Remove extra left and right margins, due to padding */
+
+.row {
+    margin: 0 -5px;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Responsive columns */
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Style the counter cards */
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+.food-container {
+    padding: 0 10vw;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.food-container::-webkit-scrollbar {
+    display: none;
+}
+
+.food-card {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 450px;
+    margin-right: 40px;
+}
+
+.food-image {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.food-thumb {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.discount-tag {
+    position: absolute;
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    color: #ff7d7d;
+    right: 10px;
+    top: 10px;
+    text-transform: capitalize;
+}
+
+.card-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    width: 90%;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    background: #fff;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.food-card:hover .card-btn {
+    opacity: 1;
+}
+
+.card-btn:hover {
+    background: #efefef;
+}
+
+.food-info {
+    width: 100%;
+    height: 100px;
+    padding-top: 10px;
+}
+
+.food-brand {
+    text-transform: uppercase;
+}
+
+.food-short-des {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    opacity: 0.5;
+    text-transform: capitalize;
+    margin: 5px 0;
+}
+
+.quantity {
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.actual-quantity {
+    margin-left: 20px;
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+.food-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: auto;
+    grid-row-gap: 40px;
+}

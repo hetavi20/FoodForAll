@@ -1,0 +1,235 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>{% block title %}{{name}} | Food For All{% endblock title %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/static/css/ngohome.css">
+    <link rel="stylesheet" href="/static/css/userBase.css">
+
+</head>
+
+<body>
+
+    <!-- header section -->
+    <header class="new">
+
+        <!-- navbar -->
+        <div class="">
+            <section class="hadder">
+                <div class="container">
+                    <nav class="navbar abx navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+                        <a class="navbar-brand" href="ngopage">FoodForAll</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="contactngo">Contact Us <span class="sr-only">(current)</span></a>
+                                </li>
+
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="galleryNGO">Gallery</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            My Account
+                        </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="afood">Available Food</a>
+                                        <a class="dropdown-item" href="viewfeedback">View Feedback</a>
+                                        <a class="dropdown-item" href="listdoner">List of all Donations</a>
+                                        <a class="dropdown-item" href="aboutngo">About Us</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#about">Update Profile</a>
+                                        <a class="dropdown-item" href="changepassword">Change Password</a>
+                                        <a class="dropdown-item" href="logout">Logout</a>
+                                    </div>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </nav>
+                </div>
+                <!-- endof navbar  -->
+                <!-- message  -->
+                <div class="message">
+                    {% for message in messages %}
+                    <li {% if message.tags %} <div class="alert alert-success my-0 alert-dismissible tag">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> {% endif %}{{ message }}</li>
+                </div>
+                {% endfor %}
+        </div>
+        <div class="row my-5">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="text-dark">Create Food Pakage..!</h3>
+                        <!-- for name -->
+                        <form accept="createPakage" method="post">
+                            {% csrf_token %}
+                            <!-- pakage name  -->
+                            <div class="form-group mt-3">
+                                <input name="Pakagename" type="text" class="form-control name-field" placeholder="Enter Pakage name" required>
+                                <small class="name-field-msg form-text text-danger ml-3"></small>
+                            </div>
+                            <!-- food type -->
+                            <label for="inputType" class="text-dark x">First</label>
+                            <select name="first" class="custom-select" id="ddlFruits1">
+                                <option value="-1">Select Food Type</option>
+                                <option value="Rice">Rice</option>
+                                <option value="Wheat">Wheat</option>
+                                <option value="Corn">Corn</option>
+                                <option value="Jowar">Jowar</option>
+                                <option value="Bajri">Bajri</option>
+                                <option value="Moong Dal">Moong Dal</option>
+                                <option value="Masoor Dal">Masoor Dal</option>
+                                <option value="Urad Dal">Urad Dal</option>
+                                <option value="Chana Dal">Chana Dal</option>
+                                <option value="Toor Dal">Toor Dal</option>
+                                <option value="Rajma">Rajma</option>
+                                <option value="Soy Bean">Soy Bean</option>
+                            </select>
+                            <small class="form-text text-danger ml-3" id="select-type1"></small>
+                            <!-- ---------------------------------------------- -->
+                            <label for="inputType" class="text-dark x">Second</label>
+                            <select name="second" class="custom-select" id="ddlFruits2">
+                                <option value="-1">Select Food Type</option>
+                                <option value="Rice">Rice</option>
+                                <option value="Wheat">Wheat</option>
+                                <option value="Corn">Corn</option>
+                                <option value="Jowar">Jowar</option>
+                                <option value="Bajri">Bajri</option>
+                                <option value="Moong Dal">Moong Dal</option>
+                                <option value="Masoor Dal">Masoor Dal</option>
+                                <option value="Urad Dal">Urad Dal</option>
+                                <option value="Chana Dal">Chana Dal</option>
+                                <option value="Toor Dal">Toor Dal</option>
+                                <option value="Rajma">Rajma</option>
+                                <option value="Soy Bean">Soy Bean</option>
+                            </select>
+                            <small class="form-text text-danger ml-3" id="select-type2"></small>
+                            <!-- ---------------------------------------------------- -->
+                            <label for="inputType" class="text-dark x">Third</label>
+                            <select name="third" class="custom-select" id="ddlFruits3">
+                                <option value="-1">Select Food Type</option>
+                                <option value="Rice">Rice</option>
+                                <option value="Wheat">Wheat</option>
+                                <option value="Corn">Corn</option>
+                                <option value="Jowar">Jowar</option>
+                                <option value="Bajri">Bajri</option>
+                                <option value="Moong Dal">Moong Dal</option>
+                                <option value="Masoor Dal">Masoor Dal</option>
+                                <option value="Urad Dal">Urad Dal</option>
+                                <option value="Chana Dal">Chana Dal</option>
+                                <option value="Toor Dal">Toor Dal</option>
+                                <option value="Rajma">Rajma</option>
+                                <option value="Soy Bean">Soy Bean</option>
+                            </select>
+                            <small class="form-text text-danger ml-3" id="select-type3"></small>
+                            <!---------------------------------------------------------->
+                            <label for="inputType" class="text-dark x">Forth</label>
+                            <select name="forth" class="custom-select" id="ddlFruits4">
+                                <option value="-1">Select Food Type</option>
+                                <option value="Rice">Rice</option>
+                                <option value="Wheat">Wheat</option>
+                                <option value="Corn">Corn</option>
+                                <option value="Jowar">Jowar</option>
+                                <option value="Bajri">Bajri</option>
+                                <option value="Moong Dal">Moong Dal</option>
+                                <option value="Masoor Dal">Masoor Dal</option>
+                                <option value="Urad Dal">Urad Dal</option>
+                                <option value="Chana Dal">Chana Dal</option>
+                                <option value="Toor Dal">Toor Dal</option>
+                                <option value="Rajma">Rajma</option>
+                                <option value="Soy Bean">Soy Bean</option>
+                            </select>
+                            <small class="form-text text-danger ml-3" id="select-type4"></small>
+                            <!-- total number -->
+                            <div class="form-group mt-3">
+                                <input name="count" type="text" class="form-control name-field" placeholder="Enter Pakage count" required>
+                                <small class="name-field-msg form-text text-danger ml-3"></small>
+                            </div>
+                            <!-- for submit -->
+                            <div class="container text-center my-3">
+                                <input type="submit" value="Create" class="btn btn-primary" id="btnSubmit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <!-- ending of form  -->
+    </header>
+    <!-- header ending -->
+
+
+    <section class="mainbox my-3">
+        <div class="">
+            <div class="row ">
+                <div class="col-sm my-3  text-center">
+                    <a class="navbar-brand" href="ngopage">
+                        <p class="text-dark">FoodForAll</p>
+                    </a>
+                </div>
+                <div class="col-sm my-3">
+                    <p class="who">Who we are</p>
+
+                    <li class="ab ">
+                        <a href="aboutngo">About us</a>
+                    </li>
+                    <li class="ab "><a href="contactngo">Contact us</a></li>
+
+                </div>
+                <div class="col-sm my-3">
+                    <p class="who ">Get Invoved</p>
+                    <li class="ab ">
+                        <a href="register">Donate Food</a>
+                    </li>
+                </div>
+                <div class="col-sm my-3">
+                    <div class="text-center">Social</div>
+                    <div class="">
+                        <a href="#" class="fa fa-facebook"> </a>&nbsp;
+                        <a href="#" class="fa fa-twitter"> </a>&nbsp;
+                        <a href="#" class="fa fa-instagram"> </a>&nbsp;
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer bg-dark">
+        <div class="container text-center text-white">
+            <p class="ph">Created For FoodForAll &nbsp;&nbsp;&nbsp;&nbsp;|<i class="fa fa-envelope"></i>foodforall@gmail.com</p>
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/static/javascript/jquery.min.js"></script>
+    <script src="/static/javascript/selectfood.js"></script>
+    <script src="/static/javascript/userBase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

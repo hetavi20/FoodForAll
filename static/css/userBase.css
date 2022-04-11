@@ -1,0 +1,200 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.new {
+    /* height: 90vh; */
+    width: 100%;
+    color: white;
+    background: linear-gradient(to right, rgba(0, 0, 0, .9), rgba(0, 0, 0, .5)), url(/static/Image/child.jpg);
+    min-height: 700px;
+    background-size: cover;
+}
+
+.new1 {
+    /* height: 90vh; */
+    width: 100%;
+    color: white;
+    background: linear-gradient(to right, rgba(0, 0, 0, 9), rgba(0, 0, 0, .8)), url(/static/Image/contact.jpg);
+    min-height: 600px;
+    background-size: cover;
+}
+
+.abx {
+    /* -webkit-tap-highlight-color: transparent; */
+    background-color: rgba(255, 255, 255, .1) !important;
+}
+
+.nav-link {
+    color: white !important;
+    font-size: 25px;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-size: 30px;
+}
+
+.title1 {
+    font-size: 40px;
+}
+
+
+/* for users page */
+
+.img {
+    width: 100%;
+    filter: blur(2px);
+}
+
+.h-100 {
+    padding: 30px !important;
+}
+
+.about {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    padding: 30px;
+    text-align: left;
+    background-color: rgb(248, 248, 248);
+    margin: 30px 0px;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 80px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+.child {
+    margin-top: 0;
+    background-color: rgb(248, 248, 248);
+    /* margin-left: 10px; */
+}
+
+.header {
+    /* height: 90vh; */
+    width: 100%;
+    color: white;
+    background: linear-gradient(to right, rgba(0, 0, 0, .9), rgba(0, 0, 0, .5)), url(/static/Image/donate.jpg);
+    /* size: 400px; */
+    min-height: 700px !important;
+    background-size: cover;
+}
+
+.header1 {
+    /* height: 90vh; */
+    width: 100%;
+    color: white;
+    background: linear-gradient(to right, rgba(0, 0, 0, .9), rgba(0, 0, 0, .5)), url(/static/Image/ngo.jpeg);
+    background-size: cover;
+    min-height: 700px;
+}
+
+.headerG {
+    /* height: 90vh; */
+    width: 100%;
+    color: white;
+    background: linear-gradient(to right, rgba(0, 0, 0, .9), rgba(0, 0, 0, .5)), url(/static/Image/gallary.jpg);
+    background-size: cover;
+    min-height: 700px;
+}
+
+.h-100 {
+    height: 100%;
+    width: 100%;
+}
+
+.button1 {
+    background-color: rgb(187, 7, 46);
+    border: none;
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 26px;
+    margin: 4px 2px;
+    opacity: 0.7;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.button1:hover {
+    opacity: 1
+}
+
+.lik {
+    color: black;
+}
+
+.info {
+    font-size: 30px !important;
+    opacity: .8;
+}
+
+.aboutus {
+    /* height: 90vh; */
+    width: 100%;
+    color: white;
+    background: linear-gradient(to right, rgba(0, 0, 0, .9), rgba(0, 0, 0, .5)), url(/static/Image/donate.jpg);
+    min-height: 700px;
+    background-size: cover;
+}
+
+.contactus {
+    /* height: 90vh; */
+    width: 100%;
+    color: white;
+    background: linear-gradient(to right, rgba(0, 0, 0, .9), rgba(0, 0, 0, .5)), url(/static/Image/cont.jpg);
+    min-height: 700px;
+    background-size: cover;
+}
+
+.mainbox {
+    background-color: rgb(248, 248, 248) !important;
+}
+
+.ab {
+    list-style-type: none;
+}
+
+
+/* for homepage */
+
+.pic {
+    width: 100%;
+    color: white;
+    background: linear-gradient(to right, rgba(0, 0, 0, .95), rgba(0, 0, 0, .8)), url(/static/Image/home.jpg);
+    background-size: cover;
+    min-height: 700px;
+}
+
+.main-text {
+    size: 90px;
+}

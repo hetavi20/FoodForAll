@@ -1,0 +1,180 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+/* from home.css */
+
+
+/*basic css*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* NAVBAR STYLING STARTS */
+
+
+/* .navigation {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+} */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #4c9e9e;
+    color: #fff;
+    height: 100px;
+}
+
+.nav-links a {
+    color: #fff;
+    font-size: 20px;
+}
+
+
+/* LOGO */
+
+.logo {
+    font-size: 32px;
+}
+
+
+/* NAVBAR MENU */
+
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+
+.menu li:hover {
+    background-color: #2980B9;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.menu li {
+    padding: 5px 14px;
+}
+
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+
+
+/* CHECKBOX HACK */
+
+input[type=checkbox] {
+    display: none;
+}
+
+
+/*HAMBURGER MENU*/
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+
+
+/* APPLYING MEDIA QUERIES */
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        position: absolute;
+        background-color: teal;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 0;
+    }
+    .menu li:hover {
+        display: inline-block;
+        background-color: #9de5e5;
+        transition: 0.3s ease;
+    }
+    .menu li+li {
+        margin-top: 12px;
+    }
+    input[type=checkbox]:checked~.menu {
+        display: block;
+    }
+    .hamburger {
+        display: block;
+    }
+    .dropdown {
+        left: 50%;
+        top: 30px;
+        transform: translateX(35%);
+    }
+    .dropdown li:hover {
+        background-color: #4c9e9e;
+    }
+}
+
+
+/* css for donation request */
+
+.requeststatus {
+    margin-top: 20px;
+}
+
+.tab {
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.status {
+    background: linear-gradient(to right, rgba(0, 0, 0, .9), rgba(0, 0, 0, .5)), url(/static/Image/foodd.jpg);
+    background-size: cover;
+    min-height: 750px;
+}
+
+.rq {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    color: white;
+}
+
+.previous-donation {
+    background: linear-gradient(to right, rgba(0, 0, 0, .9), rgba(0, 0, 0, .5)), url(/static/Image/foodd.jpg);
+    background-size: cover;
+    min-height: 750px;
+}
+
+.row1 {
+    padding-top: 30px;
+}
+
+.pd {
+    padding-top: 30px;
+}
+
+.card {
+    padding-left: 30px;
+}

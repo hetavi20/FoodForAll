@@ -44,6 +44,7 @@
                             My Account
                         </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="availableCookedMeal">Available Cooked Meal</a>
                                     <a class="dropdown-item" href="afood">Available Food</a>
                                     <a class="dropdown-item" href="viewfeedback">View Feedback</a>
                                     <a class="dropdown-item" href="listdoner">List of all Donations</a>
@@ -163,7 +164,7 @@
                                     {% csrf_token %}
                                     <input type="hidden" name="fid" value="{{food.id}}">
                                     <input type="submit" value="Cencel" class="btn btn-primary">
-                                    <a href=" packcancel "></a>
+                                    <a href="packcancel"></a>
                                 </form>
                             </td>
                             <td>

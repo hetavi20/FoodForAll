@@ -74,6 +74,6 @@ urlpatterns = [
     path('foodConfirm',views.foodConfirm,name='foodConfirm'),
     path('foodcancel',views.foodcancel,name='foodcancel'),
     path('packconfirm',views.packconfirm,name='packconfirm'),
-    path('packcancel ',views.packcancel ,name='packcancel '),
+    path('packcancel',views.packcancel ,name='packcancel'),
     path('previousOrder',views.previousOrder,name='previousOrder'),
 ]

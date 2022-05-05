@@ -207,8 +207,8 @@ def requeststatus(request):
     id=myUser.objects.get(username=name)
     user=userdetail.objects.get(user=id)
     df=list(donation.objects.filter(user=user))
-    
-    return render(request, 'requeststatus.html', {'name': name,'list':df})
+    d=list(cookedmeald.objects.filter(user=user))
+    return render(request, 'requeststatus.html', {'name': name,'list':df,'d':d})
 #----------------------------------------------------------------------------------
 # confirm donation request
 def confirm(request):
@@ -442,11 +442,25 @@ def packconfirm(request):
 # ---------------------------------------------------------------------
 def packcancel (request):
     name = request.session.get('name', default='Guest')
+    if request.method == "POST":
+        fid=request.POST.get('fid', '')
+        print(fid)
+        fd=packCart.objects.get(id=fid)
+        fd.status="cancel"
+        fd.save()
+        return redirect('foodrequest')
     return render(request, 'gallery.html', {'name': name})
 
 # ---------------------------------------------------------------------
 def foodcancel(request):
     name = request.session.get('name', default='Guest')
+    if request.method == "POST":
+        fid=request.POST.get('fid', '')
+        print(fid)
+        fd=mycart.objects.get(id=fid)
+        fd.status="cancel"
+        fd.save()
+        return redirect('foodrequest')
     return render(request, 'gallery.html', {'name': name})
 # ---------------------------------------------------------------------
 def gallery(request):
@@ -579,7 +593,9 @@ def predonation(request):
     id=myUser.objects.get(username=name)
     user=userdetail.objects.get(user=id)
     df=list(donation.objects.filter(user=user,status='confirm'))
-    return render(request,'predonation.html',{'name': name,'list':df})
+    d=list(cookedmeald.objects.filter(user=user,status='confirm'))
+    # print(d)
+    return render(request,'predonation.html',{'name': name,'list':df,'d':d})
 # -------------------------------------------------------------
 def previousOrder(request):
     name = request.session.get('name', default='Guest')
@@ -740,7 +756,7 @@ def meal(request):
         cd = cookedmeald(name=foodname,quantity=quantity,dateofc=dateofc,timeofc=timeofc,address=address,user=user,status=status)
         cd.save()
         messages.info(request,"Donate food successfuly..!")
-        return redirect('meal')
+        return redirect('users')
     return render(request, 'meal.html', {'name': name})
 
 def availableCookedMeal(request):
